@@ -1,0 +1,25 @@
+<div id="top">
+  <div class="timer">
+    <h4> Count down timer </h4>
+    <span id="hours"> {{Display.hours}} :</span> 
+    <span id="minutes">{{Display.minutes}} :</span> 
+    <span id="seconds">{{Display.seconds}} </span>
+  </div>
+</div>
+
+<div id="content">
+  <div class="amount">${{total | number : '.2-2'}}</div>
+  <button (click)="startTimer()" [disabled]="isRunning">Start</button>
+  <button (click)="inialStatus()" >Reset</button>
+</div>
+
+<aside id="side">
+  <div>
+    Friend Count
+  </div>
+  <div class="count">
+    {{fd_count}}
+  </div>
+  <button (click)="add()">Add</button>
+  <button (click)="remove()">Remove</button>
+</aside>
